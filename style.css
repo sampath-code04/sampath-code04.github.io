@@ -858,5 +858,8 @@ section{
         .contact .action form input[type="email"] {
             width: 310px;
         }
+        .skills .list ul li {
+            font-size: 12px;
+        }
     }
 
