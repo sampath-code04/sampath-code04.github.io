@@ -26,7 +26,7 @@ window.onscroll = () => {
 	navlist.classList.remove('active');
 };
 
-const sr = ScrollReveal ({
+window.sr = ScrollReveal ({
 	distance: '45px',
 	duration: 2000,
 	reset: true
