@@ -30,10 +30,10 @@ const sr = ScrollReveal ({
 	distance: '45px',
 	duration: 2000,
 	reset: true
-})
+});
 
-sr.reveal('.home-text',{delay:350, origin:'left'})
-sr.reveal('.home-img',{delay:350, origin:'right'})
+sr.reveal('.home-text',{delay:350, origin:'left'});
+sr.reveal('.home-img',{delay:350, origin:'right'});
 
-sr.reveal('.sub-service,.about,.skills,.portfolio,.service,.team,.contact',{delay:200, origin:'bottom'})
+sr.reveal('.sub-service,.about,.skills,.portfolio,.service,.team,.contact',{delay:200, origin:'bottom'});
 
