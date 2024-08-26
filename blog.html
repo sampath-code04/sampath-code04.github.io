@@ -1,72 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | My Portfolio</title>
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/blog.css" | relative_url }}">
-  <script src="{{ "/assets/js/scripts.js" | relative_url }}" defer></script>
-  <style>
-    body {
-      background-color: #1e1e1e;
-      color: #f5f5f5;
-    }
-    .file-structure {
-      margin: 20px;
-      font-family: monospace;
-    }
-    .folder {
-      margin: 10px 0;
-    }
-    .folder > .title {
-      color: #4CAF50;
-      font-weight: bold;
-    }
-    .file {
-      margin-left: 20px;
-      color: #d0d0d0;
-    }
-    .file > a {
-      color: #4CAF50;
-      text-decoration: none;
-    }
-    .file > a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <a href="{{ "/" | relative_url }}" class="logo"><h2>Portfo<span>lio</span></h2></a>
+---
+title: Blog
+layout: default
+---
+
+<!-- Header Section -->
+<header>
+    <a href="{{ "/" | relative_url }}" class="logo">
+        <h2>Portfo<span>lio</span></h2>
+    </a>
     <div class="bx bx-menu" id="menu-icon"></div>
     <ul class="navlist">
-      <li><a href="{{ "/" | relative_url }}#home">Home</a></li>
-      <li><a href="{{ "/" | relative_url }}#about">About</a></li>
-      <li><a href="{{ "/" | relative_url }}#skills">Skills</a></li>
-      <li><a href="{{ "/" | relative_url }}#portfolio">Portfolio</a></li>
-      <li><a href="{{ "/" | relative_url }}#service">Service</a></li>
-      <li><a href="{{ "/" | relative_url }}#contact">Contact</a></li>
+        <li><a href="{{ "/" | relative_url }}#home">Home</a></li>
+        <li><a href="{{ "/" | relative_url }}#about">About</a></li>
+        <li><a href="{{ "/" | relative_url }}#skills">Skills</a></li>
+        <li><a href="{{ "/" | relative_url }}#portfolio">Portfolio</a></li>
+        <li><a href="{{ "/" | relative_url }}#service">Service</a></li>
+        <li><a href="{{ "/" | relative_url }}#contact">Contact</a></li>
     </ul>
-  </header>
+</header>
 
-  <main>
-    <h1>CTF Writeups</h1>
-    <div class="file-structure">
-      {% assign ctf_folders = site.posts | group_by: "category" %}
-      {% for folder in ctf_folders %}
-        <div class="folder">
-          <div class="title">{{ folder.name }}</div>
-          <div class="files">
-            {% for post in folder.items %}
-              <div class="file">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-      {% endfor %}
+<!-- Blog Content Section -->
+<section class="blog-content">
+    <h2>CTF Writeups</h2>
+
+    <!-- Search Bar -->
+    <div class="search-article">
+        <label for="search-input" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(128,128,128,0.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </label>
+        <input type="search" id="search-input" placeholder="Search CTFs" aria-label="Search">
     </div>
-  </main>
-</body>
-</html>
+
+    <!-- CTF Folder Structure -->
+    <ul id="search-results" class="ctf-list">
+        {% assign ctf_folders = site.posts | group_by: "category" %}
+        {% for folder in ctf_folders %}
+        <li class="ctf-folder">
+            <h3>{{ folder.name }}</h3>
+            <ul class="challenge-list">
+                {% for post in folder.items %}
+                <li>
+                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+
+<script src="{{ "/assets/js/scripts.js" | relative_url }}"></script>
