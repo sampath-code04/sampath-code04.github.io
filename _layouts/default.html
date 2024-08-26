@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ "/style.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-</head>
-<body>
 
-  <main>
-    {{ content }}
-  </main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="container">
+            <a href="{{ "/" | relative_url }}" class="logo">
+                <h1>Portfo<span>lio</span></h1>
+            </a>
+            <nav class="site-nav">
+                <ul class="navlist">
+                    <li><a href="{{ "/" | relative_url }}#home">Home</a></li>
+                    <li><a href="{{ "/" | relative_url }}#about">About</a></li>
+                    <li><a href="{{ "/" | relative_url }}#skills">Skills</a></li>
+                    <li><a href="{{ "/" | relative_url }}#portfolio">Portfolio</a></li>
+                    <li><a href="{{ "/" | relative_url }}#service">Service</a></li>
+                    <li><a href="{{ "/" | relative_url }}#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="site-content">
+        {{ content }}
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 My Portfolio</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class='bx bxl-twitter' ></i></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank"><i class='bx bxl-linkedin' ></i></a></li>
+                <li><a href="https://www.github.com" target="_blank"><i class='bx bxl-github' ></i></a></li>                      
+            </ul>
+        </div>
+    </footer>
+
+    <script src="{{ "/assets/js/scripts.js" | relative_url }}"></script>
 </body>
+
 </html>
