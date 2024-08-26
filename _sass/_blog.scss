@@ -1,0 +1,26 @@
+.blog .posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blog .posts h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: $link-color;
+}
+
+.blog .posts li {
+  margin-bottom: 1.5rem;
+}
+
+.blog .posts a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $link-color;
+  text-decoration: none;
+}
+
+.blog .posts p {
+  font-size: 1rem;
+  color: $text-color;
+}
