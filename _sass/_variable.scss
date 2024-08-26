@@ -1,23 +1,27 @@
-// _sass/_variables.scss
+// Color Variables
+$blog-background: #121212;
+$light-text-color: #e0e0e0;
+$heading-color: #ffffff;
+$border-color: #333333;
+$input-background: #1e1e1e;
+$input-text-color: #e0e0e0;
+$link-color: #bb86fc;
+$link-hover-color: #ffffff;
+$highlight-color: #1e1e1e;
+$text-color: #ffffff;
+$primary-color: #bb86fc;
+$secondary-color: #2a2a2a;
+$background-color: #121212;
 
-// Colors
-$primary-color: #4CAF50;
-$secondary-color: #333;
-$background-color: #1e1e1e;
-$text-color: #f5f5f5;
-$highlight-color: #2c2c2c;
-$border-color: #444;
+// Font Variables
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 24px;
+$base-font-family: 'Arial, sans-serif';
+$heading-font-family: 'Helvetica, sans-serif';
 
-// Font sizes
-$font-size-large: 2.5em;
-$font-size-medium: 1.5em;
-$font-size-small: 1em;
-
-// Spacing
+// Spacing Variables
+$padding-small: 10px;
+$padding-medium: 15px;
 $padding-large: 20px;
-$padding-medium: 10px;
-$padding-small: 5px;
-
-// Borders
 $border-radius: 5px;
-
