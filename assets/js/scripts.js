@@ -1,14 +1,24 @@
-// scripts.js
+// Blog Page Search Filter
+document.getElementById('search-input').addEventListener('keyup', function() {
+    let filter = this.value.toLowerCase();
+    let ctfFolders = document.querySelectorAll('.ctf-folder');
 
-document.addEventListener('DOMContentLoaded', () => {
-  const dropdowns = document.querySelectorAll('.ctf-dropdown');
+    ctfFolders.forEach(function(folder) {
+        let folderName = folder.querySelector('h3').textContent.toLowerCase();
+        let challengeItems = folder.querySelectorAll('.challenge-list li');
 
-  dropdowns.forEach(dropdown => {
-    const button = dropdown.querySelector('.dropdown-btn');
-    const content = dropdown.querySelector('.dropdown-content');
+        let folderVisible = false;
 
-    button.addEventListener('click', () => {
-      content.classList.toggle('show');
+        challengeItems.forEach(function(item) {
+            let title = item.textContent.toLowerCase();
+            if (title.includes(filter) || folderName.includes(filter)) {
+                item.style.display = '';
+                folderVisible = true;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        folder.style.display = folderVisible ? '' : 'none';
     });
-  });
 });
