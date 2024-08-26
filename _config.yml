@@ -4,5 +4,6 @@ baseurl: "" # Adjust if hosted in a subdirectory
 url: "https://sampath-code04.github.io"
 theme: minima
 sass:
+  sass_dir: assets/css
   style: compressed
 markdown: kramdown
