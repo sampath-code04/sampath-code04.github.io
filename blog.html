@@ -3,6 +3,22 @@ title: Blog
 layout: default
 ---
 
+<!-- Header Section -->
+<header>
+    <a href="{{ "/" | relative_url }}" class="logo">
+        <h2>Portfo<span>lio</span></h2>
+    </a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navlist">
+        <li><a href="{{ "/" | relative_url }}#home">Home</a></li>
+        <li><a href="{{ "/" | relative_url }}#about">About</a></li>
+        <li><a href="{{ "/" | relative_url }}#skills">Skills</a></li>
+        <li><a href="{{ "/" | relative_url }}#portfolio">Portfolio</a></li>
+        <li><a href="{{ "/" | relative_url }}#service">Service</a></li>
+        <li><a href="{{ "/" | relative_url }}#contact">Contact</a></li>
+    </ul>
+</header>
+
 <!-- Blog Content Section -->
 <section class="blog-content">
     <h2>CTF Writeups</h2>
@@ -19,15 +35,15 @@ layout: default
     </div>
 
     <!-- CTF Folder Structure -->
-    <ul id="search-results" class="ctf-list">
+    <ul id="ctf-folders" class="ctf-list">
         {% assign ctf_folders = site.posts | group_by: "category" %}
         {% for folder in ctf_folders %}
         <li class="ctf-folder">
-            <h3>{{ folder.name }}</h3>
+            <h3 class="ctf-name">{{ folder.name | capitalize }}</h3>
             <ul class="challenge-list">
                 {% for post in folder.items %}
                 <li>
-                    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    <a href="{{ post.url | relative_url }}" class="challenge-link">{{ post.title | escape }}</a>
                 </li>
                 {% endfor %}
             </ul>
