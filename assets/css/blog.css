@@ -1,0 +1,100 @@
+/* assets/css/blog.css */
+
+body {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #f5f5f5;
+  padding: 10px;
+}
+
+header .logo h2 {
+  color: #f5f5f5;
+}
+
+header .navlist {
+  list-style: none;
+  padding: 0;
+}
+
+header .navlist li {
+  display: inline;
+  margin: 0 10px;
+}
+
+header .navlist a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+header .top-btn {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+header .top-btn:hover {
+  background-color: #ddd;
+}
+
+main {
+  padding: 20px;
+}
+
+.post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+}
+
+.post-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+.post-content {
+  line-height: 1.6;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  color: #4CAF50;
+}
+
+.post-content code {
+  background-color: #333;
+  color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.post-content pre {
+  background-color: #333;
+  color: #f5f5f5;
+  padding: 10px;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 20px;
+}
+
+.post-content li {
+  margin-bottom: 10px;
+}

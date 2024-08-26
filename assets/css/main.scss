@@ -1,0 +1,120 @@
+// assets/css/main.scss
+
+// Import any necessary SCSS files
+@import "../_sass/variables";
+@import "../_sass/blog";
+
+// Your main styles
+body {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+header .navlist a {
+  color: #f5f5f5;
+}
+
+header .top-btn {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.blog {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  padding: 20px;
+}
+
+.blog .heading h2 {
+  color: #f5f5f5;
+}
+
+.blog ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blog ul li {
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+}
+
+.blog ul li a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.blog ul li a:hover {
+  text-decoration: underline;
+}
+
+.blog p {
+  margin: 10px 0;
+}
+
+.ctf-list {
+  padding: 20px;
+}
+
+.ctf-dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.dropdown-btn {
+  background-color: #333;
+  color: #f5f5f5;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2c2c2c;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content ul li {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.dropdown-content ul li a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.dropdown-content ul li a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-content p {
+  color: #ccc;
+  margin: 5px 0 0 0;
+}
+
+.dropdown-btn:hover + .dropdown-content {
+  display: block;
+}

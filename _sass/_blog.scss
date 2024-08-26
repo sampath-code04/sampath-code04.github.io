@@ -1,0 +1,125 @@
+// _sass/_blog.scss
+
+@import 'variables';
+
+// Blog post container
+.post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $padding-large;
+  background-color: $highlight-color;
+  border-radius: $border-radius;
+}
+
+// Post header
+.post-header {
+  h1 {
+    font-size: $font-size-large;
+    color: $text-color;
+    margin-bottom: $padding-medium;
+  }
+
+  .post-date {
+    color: lighten($text-color, 40%);
+    font-size: $font-size-small;
+  }
+}
+
+// Post content
+.post-content {
+  color: $text-color;
+  line-height: 1.6;
+
+  h2,
+  h3,
+  h4 {
+    color: $primary-color;
+  }
+
+  code {
+    background-color: $secondary-color;
+    color: $text-color;
+    padding: $padding-small;
+    border-radius: $border-radius;
+  }
+
+  pre {
+    background-color: $secondary-color;
+    color: $text-color;
+    padding: $padding-medium;
+    border-radius: $border-radius;
+    overflow-x: auto;
+  }
+
+  ul,
+  ol {
+    padding-left: $padding-large;
+  }
+
+  li {
+    margin-bottom: $padding-small;
+  }
+}
+
+// Dropdown button for CTFS
+.ctf-dropdown {
+  position: relative;
+  display: inline-block;
+  margin: $padding-medium 0;
+
+  .dropdown-btn {
+    background-color: $secondary-color;
+    color: $text-color;
+    border: none;
+    padding: $padding-medium;
+    text-align: left;
+    font-size: $font-size-medium;
+    cursor: pointer;
+    width: 100%;
+    border-radius: $border-radius;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten($secondary-color, 10%);
+    }
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $background-color;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: $border-radius;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: $padding-medium;
+        border-bottom: 1px solid $border-color;
+
+        a {
+          color: $primary-color;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    p {
+      color: lighten($text-color, 20%);
+      margin: $padding-small 0;
+    }
+  }
+
+  &:hover .dropdown-content {
+    display: block;
+  }
+}
