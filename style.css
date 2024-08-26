@@ -109,6 +109,28 @@ header{
     
     width: 80%;
 }
+// Example styling for blog posts
+.blog .posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blog .posts li {
+  margin-bottom: 1.5rem;
+}
+
+.blog .posts a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blog .posts p {
+  font-size: 1rem;
+  color: #555;
+}
+
 
 #menu-icon{
     font-size: 35px;
